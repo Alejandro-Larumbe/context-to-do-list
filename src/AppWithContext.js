@@ -25,7 +25,6 @@ class AppWithContext extends React.Component {
                 message: task,
             }
         }
-        debugger
         // TODO: Update the `tasks` state
         this.setState((state, props) => ({
             tasks: { ...state.tasks, ...newTask }

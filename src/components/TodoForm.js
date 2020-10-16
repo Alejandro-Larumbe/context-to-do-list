@@ -23,7 +23,6 @@ class TodoForm extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        // debugger
         this.props.createTask(this.state.inputValue)
 
     }
@@ -51,7 +50,7 @@ const TodoFormWithContext = () => {
             {(value) => {
                 // console.log("value: ", value)
                 return (
-                    <TodoForm  createTask={value.createTask}/>
+                    <TodoForm createTask={value.createTask} />
                 )
             }}
         </TodoContext.Consumer>

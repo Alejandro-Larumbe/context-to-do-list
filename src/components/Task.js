@@ -1,13 +1,38 @@
 import React from 'react';
+import TodoContext from '../contexts/TodoContext';
 
-const Task = () => {
-    const handleClick = () => {
-        // TODO: Delete task
+
+// class Task extends React.Component {
+//     static contextType = TodoContext;
+
+//     constructor(props) {
+//         super(props)
+
+//     }
+
+//     handleClick = (e) => {
+//         console.log(this.context);
+//     }
+
+//     render(props) {
+//         return (
+//             <li>
+//                 <h1>{props.message}</h1>
+//                 <button onClick={handleClick}>Delete Task</button>
+//             </li>
+//         )
+//     }
+// }
+
+const Task = (props) => {
+
+    const handleClick = (e) => {
+        props.deleteTask(e.target.id)
     }
 
     return (
         <li>
-            <h1>Hi, I'm a task in your to-do list!</h1>
+            <h1>{props.task.message}</h1>
             <button onClick={handleClick}>Delete Task</button>
         </li>
     );
