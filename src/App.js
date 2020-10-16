@@ -1,11 +1,11 @@
 import React from 'react';
-import TodoForm from './components/TodoForm';
+import TodoFormWithContext from './components/TodoForm';
 import TodoList from './components/TodoList';
 
 const App = () => (
   <div>
     <h1> To-do list</h1>
-    <TodoForm />
+    <TodoFormWithContext />
     <TodoList />
   </div>
 );
